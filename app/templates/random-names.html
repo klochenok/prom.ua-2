@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div>
+        <h1>Winners:</h1>
+        {% for name in random_names%}
+        <p >{{ name }}</p>
+        {% endfor%}
+        <a href="{% url 'index' %}"><input type="submit" class="button_active" value="Main page"></a>
+    </div>
+
+{% endblock %}

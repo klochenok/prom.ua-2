@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="post">
+        <h1>Hi! Please enter your name!</h1>
+        <form action="/app/" method="post"> {% csrf_token %}
+            <p>{{ message }}</p>
+             {{ form.as_p }}
+            <input type="submit" value="Add name"/>
+        </form>
+        <a href="{% url 'random_names' %}"><input type="submit" class="button_active" value="Get winners"></a>
+    </div>
+
+{% endblock %}

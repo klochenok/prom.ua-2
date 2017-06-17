@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="post">
+        <h1>Hi! Please enter your name!</h1>
+        <form action="" method="post"> {% csrf_token %}
+            {{ message }}
+            {{ form.as_p }}
+            <input type="submit" value="Add name"/>
+        </form>
+        <a href="{% url 'random_names' %}"><input type="submit" class="button_active" value="Get winners"></a>
+        <p>If you want to delete your name, click: <a href="{% url 'delete-name' %}"><input type="submit" class="button_active" value="Delete name"></a></p>
+
+    </div>
+
+{% endblock %}

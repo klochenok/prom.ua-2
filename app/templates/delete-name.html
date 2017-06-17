@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="post">
+        <h1>Please enter name which you want to delete:</h1>
+        <form action="" method="post"> {% csrf_token %}
+            {{ message }}
+            {{ form.as_p }}
+            <input type="submit" value="Delete name"/>
+        </form>
+        <a href="{% url 'index' %}"><input type="submit" class="button_active" value="Main page"></a>
+
+    </div>
+
+{% endblock %}
