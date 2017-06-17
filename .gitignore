@@ -1,0 +1,5 @@
+__pycache__/
+.cache
+.DS_Store
+db.sqlite3
+.python-version
